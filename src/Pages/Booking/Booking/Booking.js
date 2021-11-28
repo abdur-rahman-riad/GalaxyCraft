@@ -10,7 +10,7 @@ import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import SpeedIcon from '@mui/icons-material/Speed';
 
 const Booking = () => {
-    const { user } = useAuth();
+    const { user, admin } = useAuth();
     const { id } = useParams();
     const [bookingInfo, setBookingInfo] = useState([]);
     const { register, handleSubmit, reset } = useForm();
@@ -128,7 +128,7 @@ const Booking = () => {
                                 <label htmlFor="phoneNumber">Phone Number</label>
                             </div>
 
-                            <input className="btn btn-dark w-100" type="submit" value="Confirm Order" />
+                            {admin ? <p className="bg-dark text-white p-2 text-center rounded">Admin Can't Make Order</p> : <input className="btn btn-dark w-100" type="submit" value="Confirm Order" />}
                         </form>
                     </div>
                 </div>

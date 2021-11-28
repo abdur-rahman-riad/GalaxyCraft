@@ -47,7 +47,8 @@ const MyOrderItem = (props) => {
 
                         <div className="d-flex pb-1 align-items-center">
                             <button style={{ padding: "3px 5px", border: "none", backgroundColor: "crimson", color: "white", borderRadius: "3px", }} onClick={() => deleteMyBooking(_id)} >Cancel</button>
-                            <p style={{ padding: "6px", borderRadius: "3px", fontSize: "12px" }} className="bg-dark text-white mb-0 ms-3 fst-italic">Your Order {status.toUpperCase()}</p>
+                            <button style={{ padding: "3px 10px", margin: "0 5px", border: "none", backgroundColor: "teal", color: "white", borderRadius: "3px", }}>Pay</button>
+                            <p style={{ padding: "6px", borderRadius: "3px", fontSize: "12px" }} className="bg-dark text-white mb-0 fst-italic">{status.toUpperCase()}</p>
                             {/* <h5 className="text-success fst-italic">Approved</h5> */}
                         </div>
                     </div>

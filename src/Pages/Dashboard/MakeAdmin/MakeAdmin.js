@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
+import useAuth from '../../../hooks/useAuth';
 
 const MakeAdmin = () => {
+    const { admin } = useAuth();
     const [email, setEmail] = useState('');
     const [success, setSuccess] = useState(false);
 
@@ -55,14 +57,16 @@ const MakeAdmin = () => {
                             />
                         </div>
 
-                        <div>
+                        {admin ? <div>
                             <Button
                                 className="mb-3"
                                 type="submit"
                                 fullWidth
                                 variant="contained"
                             >Add</Button>
-                        </div>
+                        </div> :
+                            <p className="bg-dark text-white p-2 text-center rounded">User Can't Make Admin</p>
+                        }
 
                     </form>
 

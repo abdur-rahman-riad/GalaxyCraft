@@ -1,8 +1,10 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import useAuth from '../../../hooks/useAuth';
 
 const AddProduct = () => {
+    const { admin } = useAuth();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -115,7 +117,8 @@ const AddProduct = () => {
                             <label for="img">Image URL</label>
                         </div>
 
-                        <input className="btn btn-dark w-100" type="submit" value="Add Package" />
+                        {admin ? <input className="btn btn-dark w-100" type="submit" value="Add Package" />
+                            : <p className="bg-dark text-white p-2 text-center rounded">User Can't Add Product</p>}
 
                     </form>
                 </div>

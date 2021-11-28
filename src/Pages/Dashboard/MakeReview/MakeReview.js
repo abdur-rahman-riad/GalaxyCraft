@@ -5,7 +5,7 @@ import review2 from '../../../images/review2.png';
 import axios from 'axios';
 
 const MakeReview = () => {
-    const { user } = useAuth();
+    const { user, admin } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
@@ -75,7 +75,7 @@ const MakeReview = () => {
                                 required />
                         </div>
 
-                        <input className="btn btn-dark w-100" type="submit" value="Post Review" />
+                        {admin ? <p className="bg-dark text-white p-2 text-center rounded">Admin Can't Post Review</p> : <input className="btn btn-dark w-100" type="submit" value="Post Review" />}
 
                     </form>
                 </div>
