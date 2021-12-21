@@ -24,11 +24,21 @@ const Footer = () => {
                         <li style={{ listStyle: "none" }}>Facebook</li>
                         <li style={{ listStyle: "none" }}>Instagram</li>
                         <li style={{ listStyle: "none" }}>Twitter</li>
-                        <li style={{ listStyle: "none" }}>YouTube</li>
+                        <li style={{ listStyle: "none" }}>
+                            <a href="https://rahmanriad.netlify.app/"
+                                target="_blank"
+                                rel="noreferrer"
+                                style={{ textDecoration: "none" }}
+                                role="button">Developer</a></li>
                     </div>
                 </div>
                 <hr />
-                <p className="text-center text-secondary pb-2">CopyRight &copy; 2021 All Right Reserved GalaxyCraft</p>
+                <p className="text-center text-secondary pb-2">CopyRight &copy; All Right Reserved GalaxyCraft || Design & Developed by
+                    <a href="https://www.linkedin.com/in/rahmanriad/"
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{ textDecoration: "none" }}
+                        role="button"> Riad Abdur Rahman</a> </p>
             </Container>
         </div>
     );
